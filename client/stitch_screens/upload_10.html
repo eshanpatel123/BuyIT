@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ShopEZ - Product Upload Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="shopping_bag">shopping_bag</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">ShopEZ</h2>
+</div>
+<div class="hidden md:flex items-center bg-slate-100 dark:bg-slate-800 rounded-lg px-3 py-1.5 w-64">
+<span class="material-symbols-outlined text-slate-500 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-500" placeholder="Search products..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 md:gap-8">
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Inventory</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Orders</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Analytics</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary/20 border-2 border-primary/10 overflow-hidden ml-2">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Professional user profile picture avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Wbld5Kv5oH-s5JGP-E3RZy5vV9wBXlARCVCmojVhgiYvylWLY-yXINO3j9PKdXVuIXrELHcYZgB5866qo4_RSY3kWSgRaXVHbLIXTwaOsrUdYxymk3nYNgAvCxQcLNWMW1BWoKdLBa5obMzavSwrgI2bbzNPLrGXIz1yBB8nisrGpBrBs1571bkUCO45LVf4rpmNk1ZUrB20SOribOYUJ2cQx77W4c9vrO9dh66hUGADC4GcqWmn0-l-qwuE6vI4Kr6OPIs9qqU"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center justify-center px-4 py-12 md:py-20 bg-linear-to-b from-white to-background-light dark:from-background-dark dark:to-background-dark/80">
+<!-- Success Icon Section -->
+<div class="mb-8 flex flex-col items-center">
+<div class="w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-6 shadow-lg shadow-green-200/50 dark:shadow-none">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 text-6xl" style="font-variation-settings: 'wght' 600;">check_circle</span>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl md:text-4xl font-extrabold tracking-tight text-center">Product Uploaded Successfully!</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-2 text-center max-w-md">Your new product is now live and ready for customers to purchase.</p>
+</div>
+<!-- Product Summary Card -->
+<div class="w-full max-w-xl bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xl p-6 mb-10">
+<div class="flex flex-col md:flex-row gap-6 items-center">
+<div class="w-full md:w-40 aspect-square rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 overflow-hidden shrink-0">
+<img alt="Product Thumbnail" class="w-full h-full object-cover" data-alt="High quality studio shot of wireless headphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAONlx5O5l1Gp-vcUDNPwjrrXobDwKYX2-4iMlHldw0CWxKuAa77UZHS9mEbC4dt_uF6FFshbZyq5pI4AFk4w11afbkX2NILBTSF78pufRyh2CSWcGa3qCeHgKpUSU11i2FVhTLblEdoAYLq85RxITYxfvqIqvK8VXUnqmjUf-hxFz5xpXRTaJpIZ631XjqYhVvErKp9o1RfplLU6p90mzXPrsopl1vd29KlG7oziERUIOL1TSG17jTuYThcL6S1ahKgpOAzXxthhU"/>
+</div>
+<div class="flex-1 flex flex-col gap-3 w-full">
+<div class="flex flex-col">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-1">New Addition</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight">Premium Wireless Headphones</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1">Noise Cancelling | Silver Edition</p>
+</div>
+<div class="grid grid-cols-2 gap-4 py-3 border-y border-slate-100 dark:border-slate-800">
+<div>
+<p class="text-slate-400 text-xs uppercase font-bold tracking-tighter">Price</p>
+<p class="text-slate-900 dark:text-slate-100 font-bold text-lg">$349.99</p>
+</div>
+<div>
+<p class="text-slate-400 text-xs uppercase font-bold tracking-tighter">SKU</p>
+<p class="text-slate-900 dark:text-slate-100 font-medium">WH-1000XM5</p>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold text-sm w-fit group">
+<span class="material-symbols-outlined text-sm">edit</span>
+<span>Edit Details</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 w-full max-w-xl">
+<button class="flex-1 h-14 rounded-lg border-2 border-primary text-primary hover:bg-primary/5 transition-all font-bold text-base flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">visibility</span>
+                        View Product in Shop
+                    </button>
+<button class="flex-1 h-14 rounded-lg bg-primary text-white hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 font-bold text-base flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_circle</span>
+                        Add Another Product
+                    </button>
+</div>
+<!-- Footer Link -->
+<div class="mt-10">
+<a class="group flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="text-sm font-medium border-b border-transparent group-hover:border-primary">Go back to Inventory</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</main>
+<!-- Bottom Stats Bar (Optional UI touch) -->
+<footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-4 px-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 dark:text-slate-500 gap-4">
+<div class="flex gap-6">
+<span>ShopEZ Seller Central © 2024</span>
+<a class="hover:underline" href="#">Help Center</a>
+<a class="hover:underline" href="#">Terms of Service</a>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span>Server Status: Operational</span>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

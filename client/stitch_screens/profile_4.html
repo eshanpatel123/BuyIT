@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ShopEZ Order History Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#136dec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101822",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 lg:px-40 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">shopping_bag</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">ShopEZ</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-slate-500 flex border-none bg-slate-100 dark:bg-slate-800 items-center justify-center pl-4 rounded-l-lg" data-icon="search">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-0 h-full placeholder:text-slate-500 px-4 rounded-r-lg text-sm font-normal" placeholder="Search orders..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<nav class="hidden lg:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Shop</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Categories</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-primary text-white shadow-md hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px] px-4 md:px-10">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-primary" href="#">Home</a>
+<span class="text-slate-400 text-sm">/</span>
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-primary" href="#">Account</a>
+<span class="text-slate-400 text-sm">/</span>
+<span class="text-primary text-sm font-semibold">Order History</span>
+</div>
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight">My Orders</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base">You've placed <span class="font-semibold text-slate-900 dark:text-slate-100">12 orders</span> in the last 6 months.</p>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter
+                        </button>
+<select class="flex-1 md:flex-none bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4 py-2 rounded-lg text-sm font-medium outline-none focus:ring-2 focus:ring-primary/50">
+<option>Last 3 months</option>
+<option>Last 6 months</option>
+<option>2023</option>
+<option>2022</option>
+</select>
+</div>
+</div>
+<!-- Tabs -->
+<div class="mb-8 overflow-x-auto">
+<div class="flex border-b border-slate-200 dark:border-slate-800 min-w-max">
+<a class="px-6 py-4 border-b-2 border-primary text-primary text-sm font-bold" href="#">All Orders</a>
+<a class="px-6 py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-sm font-bold transition-colors" href="#">Processing (2)</a>
+<a class="px-6 py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-sm font-bold transition-colors" href="#">Shipped (1)</a>
+<a class="px-6 py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-sm font-bold transition-colors" href="#">Delivered (9)</a>
+<a class="px-6 py-4 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-sm font-bold transition-colors" href="#">Cancelled</a>
+</div>
+</div>
+<!-- Order List -->
+<div class="flex flex-col gap-6">
+<!-- Order Card 1: Delivered -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="p-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4">
+<div class="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span> Delivered
+                                    </div>
+<span class="text-slate-400">|</span>
+<p class="text-slate-900 dark:text-slate-100 font-bold">#EZ-98234</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Placed on Oct 10, 2023</p>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1 flex gap-4">
+<div class="size-24 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Red athletic sneaker on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo8wL5FCdkloSKvbcmmFn4ll8mUaY_npwhMOLZ8wr-qmm7NIU_Gf1ZubcIpr5t5q7I2yIXGXF0dtBib_kuPDEuEzAAFe83cVnQPguIPbwNtL8rTMgVpC8SlU-y5AJdGKTnE4OvnwB8kPnbgWwwlsn_MLSsbh8ujMk-mKFF35s-PwqXjYx4u8NawQh_dIWrZwFtfkQKwemqFV8GFcT0-4PoI_LLZdAH2OOB9fPg9TXMsemon8ordoji-Zf-fB6bm4M9mND2KYDCHZk"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold mb-1">UltraBoost Cloud Racer</h3>
+<p class="text-slate-500 text-sm">Color: Core Black / Size: 10</p>
+<p class="text-slate-500 text-sm mt-1">Qty: 1</p>
+</div>
+</div>
+<div class="flex flex-row md:flex-col md:items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-slate-100 dark:border-slate-800 pt-4 md:pt-0 md:pl-6">
+<p class="text-slate-500 text-sm">Total Amount</p>
+<p class="text-slate-900 dark:text-slate-100 text-xl font-black">$129.00</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm">Delivered on Oct 12, 2023</p>
+<div class="flex gap-3">
+<button class="px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold shadow-sm hover:bg-primary/90">Track Order</button>
+<button class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold hover:bg-slate-50">View Details</button>
+</div>
+</div>
+</div>
+<!-- Order Card 2: Processing -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="p-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4">
+<div class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">sync</span> Processing
+                                    </div>
+<span class="text-slate-400">|</span>
+<p class="text-slate-900 dark:text-slate-100 font-bold">#EZ-98441</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Placed on Oct 24, 2023</p>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1 flex gap-4">
+<div class="size-24 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Modern wireless noise-cancelling headphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuJg6h9-A7EOmR_FX2wSAo_aMQlTVd-tlR7_5zJJcXqZ7qhAIzFfQMi5yZUPIw36ONWAF1aCQtV9LgNLnVbSkCRg-RJnos2x_7mWSyQRqqL58JEXpWExkI67d6c6KL54ncNgshY9t3OLdvAxJ3LYgDFBhjRys7166GzCUcAWgwgeuGjEnaba81QNbJF2SkXos5G8xILeiDhfK_b59ed92FEWqLjMvXxzxnjaECNTusolYalXR8mDOLSmIOF6OMzAaQFnHAEkw6Mfw"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold mb-1">SonicFlow Wireless Headphones</h3>
+<p class="text-slate-500 text-sm">Color: Midnight Blue</p>
+<p class="text-slate-500 text-sm mt-1">Qty: 1</p>
+</div>
+</div>
+<div class="flex flex-row md:flex-col md:items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-slate-100 dark:border-slate-800 pt-4 md:pt-0 md:pl-6">
+<p class="text-slate-500 text-sm">Total Amount</p>
+<p class="text-slate-900 dark:text-slate-100 text-xl font-black">$249.50</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm italic">Arriving by Oct 28, 2023</p>
+<div class="flex gap-3">
+<button class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold hover:bg-slate-50">View Details</button>
+<button class="px-4 py-2 rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-500 text-sm font-semibold cursor-not-allowed">Track Order</button>
+</div>
+</div>
+</div>
+<!-- Order Card 3: Shipped -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="p-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-4">
+<div class="bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">local_shipping</span> Shipped
+                                    </div>
+<span class="text-slate-400">|</span>
+<p class="text-slate-900 dark:text-slate-100 font-bold">#EZ-98312</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Placed on Oct 18, 2023</p>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1 flex gap-4">
+<div class="size-24 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Elegant minimalist quartz wristwatch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr9X2kJg9jc-8qUDTmrDEIVQZDWWKStf1y-hTgHertKvCFLPPnlMlZioWP4Jbi8wtcJ04s5D4I8t7nEVrpno4ndDtZxUkAUxv0hdws829NhqbdHQ6RcPE_gNBrHaNGdsiipXmsXdz036sZIhd-xtfOfGpg4MTEmQv0Y-UFd0CAv--fpdonPuGpWtVr786VtFsNDLgMqw5GW2ZDZSnUlGjlyYjuCJplOR2NzN3UY-PoCKK3wkxR3qebM3jBHFTrcH_EqtGKQl8MYhI"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="text-slate-900 dark:text-slate-100 font-semibold mb-1">Horizon Smart Watch</h3>
+<p class="text-slate-500 text-sm">Strap: Leather Brown</p>
+<p class="text-slate-500 text-sm mt-1">Qty: 1</p>
+</div>
+</div>
+<div class="flex flex-row md:flex-col md:items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-slate-100 dark:border-slate-800 pt-4 md:pt-0 md:pl-6">
+<p class="text-slate-500 text-sm">Total Amount</p>
+<p class="text-slate-900 dark:text-slate-100 text-xl font-black">$315.20</p>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm">Shipped via DHL - <span class="text-primary font-medium">#DHL-9923485</span></p>
+<div class="flex gap-3">
+<button class="px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold shadow-sm hover:bg-primary/90">Track Package</button>
+<button class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-sm font-semibold hover:bg-slate-50">View Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Pagination/Load More -->
+<div class="mt-12 flex justify-center">
+<button class="flex items-center gap-2 px-8 py-3 rounded-full border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                        Load More Orders
+                        <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Sidebar / Additional Info (Optional Context) -->
+<footer class="bg-slate-900 text-slate-400 py-12 mt-12 px-4 lg:px-40">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined">shopping_bag</span>
+<h2 class="text-lg font-bold">ShopEZ</h2>
+</div>
+<p class="text-sm">Seamless shopping experience with worldwide delivery and 24/7 customer support.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Shop</h4>
+<ul class="flex flex-col gap-2 text-sm">
+<li><a class="hover:text-primary" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary" href="#">Featured</a></li>
+<li><a class="hover:text-primary" href="#">Deals</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Support</h4>
+<ul class="flex flex-col gap-2 text-sm">
+<li><a class="hover:text-primary" href="#">Help Center</a></li>
+<li><a class="hover:text-primary" href="#">Shipping Info</a></li>
+<li><a class="hover:text-primary" href="#">Returns</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Account</h4>
+<ul class="flex flex-col gap-2 text-sm">
+<li><a class="hover:text-primary" href="#">Profile</a></li>
+<li><a class="text-primary" href="#">Order History</a></li>
+<li><a class="hover:text-primary" href="#">Wishlist</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-800 text-xs text-center">
+                © 2023 ShopEZ E-commerce Platform. All rights reserved.
+            </div>
+</footer>
+</div>
+</div>
+</body></html>

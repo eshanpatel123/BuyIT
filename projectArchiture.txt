@@ -1,0 +1,106 @@
+PROJECT ARCHITECTURE :
+SHOPEZ : E-commerce Application
+The frontend is represented by the "Frontend" section, including user interface components such as User Authentication, Cart, Products, Profile, Admin  dashboard, etc., 
+
+• The backend is represented by the "Backend" section, consisting of API endpoints for Users, Orders, Products, etc. It also includes Admin Authentication and an Admin Dashboard. 
+
+•  The Database section represents the database that stores collections for Users, cart, Orders and Product.
+ER DIAGRAM ;
+The ShopEZ ER-diagram represents the entities and relationships involved in an e-commerce system.  It illustrates how users, products, cart, and orders are interconnected. Here is a breakdown of the entities  and their relationships: 
+
+USER: Represents the individuals or entities who are registered in the platform.  
+
+Admin: Represents a collection with important details such as Banner image and Categories. 
+
+Products: Represents a collection of all the products available in the platform. 
+
+Cart: This collection stores all the products that are added to the cart by users. Here, the elements in the cart are  differentiated by the user Id. 
+
+Orders: This collection stores all the orders that are made by the users in the platform.
+FEATURES:
+1. Comprehensive Product Catalog: ShopEZ boasts an extensive catalog of products, offering  a diverse range of items and options for shoppers. You can effortlessly explore and discover  various products, complete with detailed descriptions, customer reviews, pricing, and available  discounts, to find the perfect items for your needs. 
+
+2. Shop Now Button: Each product listing features a convenient "Shop Now" button. When you  find a product that aligns with your preferences, simply click on the button to initiate the  purchasing process. 
+
+3. Order Details Page: Upon clicking the "Shop Now" button, you will be directed to an order  details page. Here, you can provide relevant information such as your shipping address,  preferred payment method, and any specific product requirements. 
+
+4. Secure and Efficient Checkout Process: ShopEZ guarantees a secure and efficient checkout  process. Your personal information will be handled with the utmost security, and we strive to  make the purchasing process as swift and trouble-free as possible. 
+
+5. Order Confirmation and Details: After successfully placing an order, you will receive a  confirmation notification. Subsequently, you will be directed to an order details page, where  you can review all pertinent information about your order, including shipping details, payment  method, and any specific product requests you specified.
+ROLES AND RESPONSIBILITIES:
+USER: Represents the individuals or entities who are registered in the platform.
+  
+Admin: Represents a collection with important details such as Banner image and Categories.
+ 
+Products: Represents a collection of all the products available in the platform. 
+
+Cart: This collection stores all the products that are added to the cart by users. Here, the elements in the cart are  differentiated by the user Id. 
+
+Orders: This collection stores all the orders that are made by the users in the platform.
+USER FLOW:
+ Users start by registering for an account. 
+ After registration, they can log in with their credentials. 
+ Once logged in, they can check for the available products in the platform.
+Users can add the products they wish to their carts and order. 
+They can then proceed by entering address and payment details. 
+After ordering, they can check them in the profile section.
+MVC PATTEREN :
+The Shop-Ez backend application follows the Model-View-Controller (MVC) architectural pattern, a software design approach that separates an application into three interconnected layers. This separation allows for modularity, easier maintenance, and scalability.
+
+Model Layer (Data Layer)
+The Model layer is responsible for handling all data-related logic. This includes the definition of data schemas and the operations performed on the database using those schemas. The models are implemented using Mongoose, which provides a schema-based solution to model application data for MongoDB.
+
+
+Controller Layer
+The Controller layer acts as an intermediary between the view (routes) and the model. It receives incoming requests, processes the input (which may include validation or transformation), calls the appropriate methods from the model, and then returns a response to the client.
+
+View Layer (Routing Layer)
+In the context of a backend REST API, the View is implemented as the routing layer, where various endpoints are defined. These endpoints determine how the backend responds to different HTTP requests (GET, POST, PUT, DELETE) and are responsible for invoking the appropriate controller functions.
+
+
+Advantages of Using MVC in This Project
+Separation of Concerns: Each layer has a clearly defined responsibility, improving readability and maintainability.
+Scalability: New features can be added easily by creating new routes, controllers, and models.
+Reusability: Logic in controllers and models can be reused across multiple parts of the application.
+Testing: Each layer can be tested independently, especially the controllers and models.
+Collaboration-Friendly: Multiple developers can work simultaneously on different layers without conflict.
+BACKEND DEVELOPMENT AND EXPLANATION:
+ 1.Setup express server:   
+• Create index.js file.         
+ • Create an express server on your desired port number.         
+ • Define API’s
+
+ 2. Database Configuration: 
+• Set up a MongoDB database either locally or using a cloud-based MongoDB service like MongoDB Atlas or use locally with MongoDB compass. 
+• Create a database and define the necessary collections for admin, users, products,  orders and other relevant data. 
+
+3. Create Express.js Server: 
+• Set up an Express.js server to handle HTTP requests and serve API endpoints. 
+• Configure middleware such as body-parser for parsing request bodies and cors for handling cross-origin requests.
+
+4. Define API Routes: 
+
+• Create separate route files for different API functionalities such as users, orders, and authentication. 
+• Define the necessary routes for listing products, handling user registration and  login,managing orders, etc. 
+• Implement route handlers using Express.js to handle requests and interact with the database. 
+
+5. Implement Data Models: 
+• Define Mongoose schemas for the different data entities like products, users,  and orders. 
+• Create corresponding Mongoose models to interact with the MongoDB database.
+ • Implement CRUD operations (Create, Read, Update, Delete) for each model to perform database operations.
+
+6. User Authentication:
+• Create routes and middleware for user registration, login, and logout.
+ • Set up authentication middleware to protect routes that require user authentication. 
+         
+7. Handle new products and Orders: 
+• Create routes and controllers to handle new product listings, including fetching products data from the database and sending it as a response. 
+• Implement ordering(buy) functionality by creating routes and controllers to  handle order requests, including validation and database updates. 
+        
+8. Admin Functionality: 
+• Implement routes and controllers specific to admin functionalities such as adding products, managing user orders, etc. 
+• Add necessary authentication and authorization checks to ensure only authorized admins can access these routes. 
+
+9. Error Handling: 
+• Implement error handling middleware to catch and handle any errors that occur during the API requests. 
+• Return appropriate error responses with relevant error messages and HTTP status codes.
