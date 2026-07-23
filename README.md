@@ -1,6 +1,6 @@
 # ShopEZ - Complete E-Commerce Platform
 
-ShopEZ is a full-featured, robust e-commerce web application built using the powerful MERN stack (MongoDB, Express, React, Node.js). Setup to handle everything from user authentication, product catalogs, fully integrated shopping carts, to a dedicated seller dashboard. 
+ShopEZ is a full-featured, robust e-commerce web application built using the powerful MERN stack (MySql, Express, React, Node.js). Setup to handle everything from user authentication, product catalogs, fully integrated shopping carts, to a dedicated seller dashboard. 
 
 ![ShopEZ](/client/public/logo.png) (Logo)
 
@@ -31,8 +31,7 @@ ShopEZ is a full-featured, robust e-commerce web application built using the pow
 **Backend Framework & Tools:**
 - **Node.js**
 - **Express.js**
-- **MongoDB** (Cloud Database via Atlas)
-- **Mongoose ORM** (Schema validations and querying)
+- **MySql** (Cloud Database via Atlas)
 - **JSON Web Tokens (JWT)** (Secure route protection and authentication)
 - **Bcrypt.js** (Password Hashing)
 
