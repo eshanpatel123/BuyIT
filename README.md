@@ -1,8 +1,8 @@
-# ShopEZ - Complete E-Commerce Platform
+# BuyIT - E-Commerce Web Application
 
-ShopEZ is a full-featured, robust e-commerce web application built using the powerful MERN stack (MySql, Express, React, Node.js). Setup to handle everything from user authentication, product catalogs, fully integrated shopping carts, to a dedicated seller dashboard. 
+BuyIT is a full-featured, robust e-commerce web application built using the powerful MERN stack (MySql, Express, React, Node.js). Setup to handle everything from user authentication, product catalogs, fully integrated shopping carts, to a dedicated seller dashboard. 
 
-![ShopEZ](/client/public/logo.png) (Logo)
+![BuyIT](/client/public/logo.png) (Logo)
 
 ## 🚀 Features
 
@@ -23,7 +23,7 @@ ShopEZ is a full-featured, robust e-commerce web application built using the pow
 
 **Frontend Framework & Tools:**
 - **React.js** (Vite build system)
-- **Tailwind CSS** (for highly responsive, modern UI styling)
+- **CSS** (for highly responsive, modern UI styling)
 - **React Router DOM** (for SPA navigation)
 - **Axios** (for API communication)
 - **Context API** (for global Authentication State Management)
@@ -83,7 +83,7 @@ npm run dev
 ## 🏗️ Project Structure
 
 ```text
-SHOPEZ/
+BuyIT/
 ├── client/                 # React Frontend
 │   ├── public/             # Static assets (logos, etc.)
 │   ├── src/
